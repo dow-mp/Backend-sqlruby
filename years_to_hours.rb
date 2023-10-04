@@ -1,25 +1,20 @@
-# Call this program years_to_hours.rb.  
-# Write a program which asks the user for a number of years, and then prints out how many hours are in that many years.  
-
-puts "Enter a number of years."  
-years = gets.chomp # this returns a string  
-years = years.to_i # this converts a string to an integer  
-hours = years * 365 * 24  
-puts "That's #{hours} hours."
+def years_to_hours
+    puts("Enter a number of years.")
+    years = gets.chomp
+    hours = years.to_i * 365 * 24
+    puts "There are #{hours.to_i} hours in #{years} years."
 
 
-# Then it asks for a number of decades, and prints out the number of minutes are in that many decades.  
+    puts("Enter a number of decades.")
+    decades = gets.chomp
+    minutes = decades.to_i * 10 * 365 * 24 * 60
+    puts " There are #{minutes.to_i} minutes in #{decades} decades"
 
-puts "Enter a number of decades."
-decades = gets.chomp
-decades = decades.to_i
-minutes = decades * 60 * 24 * 365 * 10
-puts "That's #{minutes} minutes."
 
-# Then it asks for the user's age, and prints out the number of seconds old the user is.
+    puts("Enter your age.")
+    age = gets.chomp
+    seconds = age.to_i * 365 * 24 * 60 * 60
+    puts "You are #{seconds.to_i} old."
+end
 
-puts "Enter your age."
-age = gets.chomp
-age = age.to_i
-seconds = 60 * 60 * 24 * 365 * age
-puts "You are #{seconds} seconds old."
+years_to_hours
